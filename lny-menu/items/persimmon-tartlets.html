@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Persimmon Tartlets with Black Sesame Pâte Sablée — Lunar New Year</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --color-bg: #fefcf4;
+  --color-text: #1A1A1A;
+  --color-text-secondary: #6B6B6B;
+  --color-accent: #C23B22;
+  --color-rule: #E0DDD8;
+  --font-display: 'Outfit', system-ui, sans-serif;
+  --font-body: 'Outfit', system-ui, sans-serif;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --max-width: 40rem;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+}
+
+/* ---- Back link ---- */
+
+.back-link {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  margin-bottom: var(--space-lg);
+  padding: 0.4rem 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--color-text);
+  border-bottom-color: var(--color-text);
+}
+
+.back-link::before {
+  content: "\2190\00a0\00a0";
+}
+
+/* ---- Item header ---- */
+
+.item-header {
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.item-header__name {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-sm);
+}
+
+.item-header__tagline {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+
+/* ---- Item body ---- */
+
+.item-body p {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin-bottom: var(--space-md);
+  line-height: 1.75;
+}
+
+.item-body em {
+  font-style: italic;
+}
+
+/* ---- Fact blocks ---- */
+
+.fact-block {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-rule);
+}
+
+.fact-block + .fact-block {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+}
+
+.fact-block__label {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.45rem;
+}
+
+.fact-block__text {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.fact-block__text em {
+  font-style: italic;
+}
+
+/* ---- Item nav ---- */
+
+.item-nav {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.item-nav a {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+  max-width: 45%;
+}
+
+.item-nav a:hover {
+  color: var(--color-text);
+  border-bottom-color: var(--color-text);
+}
+
+.item-nav__prev::before {
+  content: "\2190\00a0";
+}
+
+.item-nav__next::after {
+  content: "\00a0\2192";
+}
+
+/* ---- Responsive ---- */
+
+@media (min-width: 600px) {
+  html { font-size: 17px; }
+  .container { padding: var(--space-xl) var(--space-lg); }
+  .item-header__name { font-size: 2.6rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <a href="../index.html" class="back-link">Full Menu</a>
+
+  <header class="item-header">
+    <h1 class="item-header__name">Persimmon Tartlets with Black Sesame Pâte Sablée</h1>
+    <p class="item-header__tagline">Two ancient ingredients, one very presumptuous French crust.</p>
+  </header>
+
+  <div class="item-body">
+    <p>The persimmon has been cultivated in China for 2,000 years and was introduced to Japan in the 7th century and Korea by the 14th century. Across East Asia, the persimmon is a seasonal marker, a ritual object, an artistic motif, and a vehicle for linguistic wordplay.</p>
+<p>The history of black sesame goes back even further—to at least 2000 BCE. Across East Asian cuisines, black sesame is simultaneously medicinal and indulgent.</p>
+  </div>
+
+    <div class="fact-block">
+    <p class="fact-block__label">Fun Fact</p>
+    <p class="fact-block__text">In China, the persimmon means “may things go your way.” In Korea, folktales say it wards off tigers. In Japan, it inspired one of the most well-known haikus ever written (by Masaoka Shiki).</p>
+  </div>
+
+  <div class="fact-block">
+    <p class="fact-block__label">Not-So-Fun Fact</p>
+    <p class="fact-block__text">Commodore Matthew Perry is often credited with bringing persimmons to the U.S. But it was actually Japanese immigrants who made the fruit commercially viable in California’s climate. This mirrors a broader pattern of colonial or military figures receiving credit for “discovery,” while the labor of immigrant communities that actually cultivated, adapted, and sustained these foods goes unrecognized.</p>
+  </div>
+
+  <nav class="item-nav">
+    <a href="hk-milk-tea-cream-puffs.html" class="item-nav__prev">Cream Puffs with Hong Kong Milk Tea Crème Diplomat</a>
+    <a href="du-jjon-ku-strawberries.html" class="item-nav__next">Du-Jjon-Ku-Covered Strawberries</a>
+  </nav>
+
+</div>
+</body>
+</html>

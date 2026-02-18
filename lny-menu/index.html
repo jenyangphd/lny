@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Lunar New Year — Empire, Migration, and the Bakery Counter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --color-bg: #fefcf4;
+  --color-text: #1A1A1A;
+  --color-text-secondary: #6B6B6B;
+  --color-accent: #C23B22;
+  --color-rule: #E0DDD8;
+  --color-card-hover: #F4F3F0;
+  --font-display: 'Outfit', system-ui, sans-serif;
+  --font-body: 'Outfit', system-ui, sans-serif;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --max-width: 40rem;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+/* ---- Hero ---- */
+
+.hero {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.hero__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---- Container ---- */
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* ---- Intro essay ---- */
+
+.intro {
+  padding: var(--space-lg) 0 var(--space-xl);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.intro__subtitle {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+}
+
+.intro__text {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--color-text);
+  max-width: 36rem;
+}
+
+.intro__text + .intro__text {
+  margin-top: var(--space-md);
+}
+
+/* ---- Section heading ---- */
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  padding: var(--space-xl) 0 var(--space-md);
+}
+
+/* ---- Menu list ---- */
+
+.menu-list {
+  list-style: none;
+}
+
+.menu-item {
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.menu-item:first-child {
+  border-top: 1px solid var(--color-rule);
+}
+
+.menu-item__link {
+  display: block;
+  padding: var(--space-md) var(--space-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s ease;
+  margin: 0 calc(var(--space-sm) * -1);
+  border-radius: 4px;
+}
+
+.menu-item__link:hover,
+.menu-item__link:active {
+  background: var(--color-card-hover);
+}
+
+.menu-item__name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.3rem;
+}
+
+.menu-item__tagline {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* ---- Footer ---- */
+
+.footer {
+  margin-top: var(--space-2xl);
+  padding: var(--space-md) 0 var(--space-xl);
+  border-top: 1px solid var(--color-rule);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+}
+
+/* ---- Responsive ---- */
+
+@media (min-width: 600px) {
+  html { font-size: 17px; }
+  .container { padding: 0 var(--space-lg); }
+  .intro__text { font-size: 0.95rem; }
+  .menu-item__name { font-size: 1.35rem; }
+}
+
+@media (min-width: 900px) {
+  .hero__image { border-radius: 0 0 2px 2px; }
+}
+</style>
+</head>
+<body>
+
+  <!-- Hero: horses graphic + "Lunar New Year" title from zine cover -->
+  <div class="hero">
+    <img
+      class="hero__image"
+      src="assets/hero.png?v=2"
+      alt="Lunar New Year — illustration of three galloping horses in blue brushstroke"
+      width="1119"
+      height="852"
+    >
+  </div>
+
+  <div class="container">
+
+    <!-- Intro essay from zine page 1 -->
+    <section class="intro">
+      <p class="intro__subtitle">Empire, Migration, and the Bakery Counter</p>
+      <p class="intro__text">Every item in this collection exists because something moved — people, seeds, techniques, or capital — across a border that someone else drew. Chili peppers crossed the Pacific via Portuguese trade ships and became gochujang. American wheat flooded postwar Japan and became shokupan. Persimmons left China for Japan, Korea, and eventually California, carried by immigrants whose labor made them grow. Fortune cookies traveled from Kyoto to San Francisco to every Chinese restaurant in America, changing identity at each stop.</p>
+      <p class="intro__text">The common thread is not simply "Asian food" but the specific forces that shape what people eat and what meaning they attach to it: colonial trade routes, wartime occupation, exclusion laws, forced migration, and the economic pressures that push people to adapt, improvise, and invent. Hong Kong's pineapple buns exist because British colonialism brought ovens, Portuguese Macau brought egg tarts, and Chinese-Mexican returnees brought conchas.</p>
+      <p class="intro__text">The modern Asian bakery is where all of these histories converge. What connects these foods is not a shared cuisine but a shared condition: they were all shaped by forces larger than any single culture, and they were all made meaningful by the people who received, adapted, and loved them. These foods are authentic to the histories that produced them, which are histories of encounter, displacement, and invention under constraint. The bakery counter is where empire's ingredients meet immigrant ingenuity, and the result is something that belongs fully to no single tradition, and entirely to the communities that sustain it.</p>
+    </section>
+
+    <!-- Menu items -->
+    <p class="section-heading">The Menu</p>
+
+    <nav>
+      <ol class="menu-list">
+
+        <li class="menu-item">
+          <a href="items/fortune-cookies.html" class="menu-item__link">
+            <h2 class="menu-item__name">Fortune Cookies</h2>
+            <p class="menu-item__tagline">A persistent case study in how diasporic food identities form.</p>
+          </a>
+        </li>
+
+        <li class="menu-item">
+          <a href="items/pineapple-buns-pandan-kaya.html" class="menu-item__link">
+            <h2 class="menu-item__name">Pineapple Buns with Pandan Kaya</h2>
+            <p class="menu-item__tagline">Three streams of imperialism walk into a bakery….</p>
+          </a>
+        </li>
+
+        <li class="menu-item">
+          <a href="items/scallion-salt-bread.html" class="menu-item__link">
+            <h2 class="menu-item__name">Scallion Salt Bread</h2>
+            <p class="menu-item__tagline">Northern China's flatbread, wearing a Japanese-Korean cloak.</p>
+          </a>
+        </li>
+
+        <li class="menu-item">
+          <a href="items/gochujang-caramel-cookies.html" class="menu-item__link">
+            <h2 class="menu-item__name">Gochujang Caramel Cookies</h2>
+            <p class="menu-item__tagline">The Columbian Exchange gave Korea chili peppers. Korea gave back gochujang.</p>
+          </a>
+        </li>
+
+        <li class="menu-item">
+          <a href="items/hk-milk-tea-cream-puffs.html" class="menu-item__link">
+            <h2 class="menu-item__name">Cream Puffs with Hong Kong Milk Tea Crème Diplomat</h2>
+            <p class="menu-item__tagline">France piped the shell. Britain steeped the tea. Hong Kong made it lunch.</p>
+          </a>
+        </li>
+
+        <li class="menu-item">
+          <a href="items/persimmon-tartlets.html" class="menu-item__link">
+            <h2 class="menu-item__name">Persimmon Tartlets with Black Sesame Pâte Sablée</h2>
+            <p class="menu-item__tagline">Two ancient ingredients, one very presumptuous French crust.</p>
+          </a>
+        </li>
+
+        <li class="menu-item">
+          <a href="items/du-jjon-ku-strawberries.html" class="menu-item__link">
+            <h2 class="menu-item__name">Du-Jjon-Ku-Covered Strawberries</h2>
+            <p class="menu-item__tagline">An artifact of the K-pop industrial complex.</p>
+          </a>
+        </li>
+
+      </ol>
+    </nav>
+
+    <footer class="footer">
+      <p>Lunar New Year Happy Hour — A pastry collection exploring the intersections of empire, migration, and the modern Asian bakery.</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

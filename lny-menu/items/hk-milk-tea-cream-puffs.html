@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Cream Puffs with Hong Kong Milk Tea Crème Diplomat — Lunar New Year</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --color-bg: #fefcf4;
+  --color-text: #1A1A1A;
+  --color-text-secondary: #6B6B6B;
+  --color-accent: #C23B22;
+  --color-rule: #E0DDD8;
+  --font-display: 'Outfit', system-ui, sans-serif;
+  --font-body: 'Outfit', system-ui, sans-serif;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --max-width: 40rem;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+}
+
+/* ---- Back link ---- */
+
+.back-link {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  margin-bottom: var(--space-lg);
+  padding: 0.4rem 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--color-text);
+  border-bottom-color: var(--color-text);
+}
+
+.back-link::before {
+  content: "\2190\00a0\00a0";
+}
+
+/* ---- Item header ---- */
+
+.item-header {
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.item-header__name {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-sm);
+}
+
+.item-header__tagline {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+
+/* ---- Item body ---- */
+
+.item-body p {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin-bottom: var(--space-md);
+  line-height: 1.75;
+}
+
+.item-body em {
+  font-style: italic;
+}
+
+/* ---- Fact blocks ---- */
+
+.fact-block {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-rule);
+}
+
+.fact-block + .fact-block {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+}
+
+.fact-block__label {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.45rem;
+}
+
+.fact-block__text {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.fact-block__text em {
+  font-style: italic;
+}
+
+/* ---- Item nav ---- */
+
+.item-nav {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.item-nav a {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+  max-width: 45%;
+}
+
+.item-nav a:hover {
+  color: var(--color-text);
+  border-bottom-color: var(--color-text);
+}
+
+.item-nav__prev::before {
+  content: "\2190\00a0";
+}
+
+.item-nav__next::after {
+  content: "\00a0\2192";
+}
+
+/* ---- Responsive ---- */
+
+@media (min-width: 600px) {
+  html { font-size: 17px; }
+  .container { padding: var(--space-xl) var(--space-lg); }
+  .item-header__name { font-size: 2.6rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <a href="../index.html" class="back-link">Full Menu</a>
+
+  <header class="item-header">
+    <h1 class="item-header__name">Cream Puffs with Hong Kong Milk Tea Crème Diplomat</h1>
+    <p class="item-header__tagline">France piped the shell. Britain steeped the tea. Hong Kong made it lunch.</p>
+  </header>
+
+  <div class="item-body">
+    <p>Choux pastry is one of the foundational doughs of French pâtisserie (alongside <em>pâte brisée</em>, <em>pâte feuilletée</em>, and <em>pâte sablée</em>). Choux pastry traveled to Japan in the 1800s via Yokohama’s foreign concession, and <em>shu cream</em> made its commercial debut in Tokyo’s Kanda district.</p>
+<p>Hong Kong milk tea originated in the mid-20th century as a local working-class adaptation of British afternoon tea, using stronger tea blends and evaporated milk. HK milk tea is inseparable from <em>cha chaan teng</em>—a hybrid café that serves a distinctly Hong Kong fusion of Western and Chinese food. The tea is always served alongside this in-between cuisine.</p>
+  </div>
+
+    <div class="fact-block">
+    <p class="fact-block__label">Fun Fact</p>
+    <p class="fact-block__text">Hong Kong milk tea is also called “silk stocking” tea, named for the original brewing method: a woman tailored cotton interlock fabric used for suit jacket linings into a bag-shaped filter to produce a smooth brew (weird that people only remember her husband’s name..)</p>
+  </div>
+
+  <div class="fact-block">
+    <p class="fact-block__label">Not-So-Fun Fact</p>
+    <p class="fact-block__text">Britain’s insatiable demand for Chinese tea created a massive trade deficit, which Britain “solved” by flooding China with opium. The resulting Opium Wars led to the cession of Hong Kong in 1842. The milk tea in these cream puffs exists because of a colonial narcotics operation.</p>
+  </div>
+
+  <nav class="item-nav">
+    <a href="gochujang-caramel-cookies.html" class="item-nav__prev">Gochujang Caramel Cookies</a>
+    <a href="persimmon-tartlets.html" class="item-nav__next">Persimmon Tartlets with Black Sesame Pâte Sablée</a>
+  </nav>
+
+</div>
+</body>
+</html>
